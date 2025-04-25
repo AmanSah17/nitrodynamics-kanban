@@ -3,7 +3,7 @@ services:
     name: nitrodynamics-kanban
     env: node
     nodeVersion: 18.x
-    buildCommand: npm install && npm run build
+    buildCommand: export NODE_OPTIONS=--openssl-legacy-provider && npm install && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
