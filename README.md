@@ -1,19 +1,58 @@
-# Watch Youtube here: https://youtu.be/ERXS6CROWR4
+# NitroDynamics Kanban Board
 
-This is source code for my Youtube video on how I created a Kanban app UI from sketch. I used NextJS and TailwindCSS.
+A modern Kanban board application built with Next.js and TailwindCSS, customized for NitroDynamics' aerospace and defense project management.
 
-## Preview
+## Features
 
-Preview the example live on [https://kanban-ui.vercel.app](https://kanban-ui.vercel.app)
+- Drag and drop task management
+- Real-time updates
+- Responsive design
+- Modern UI with TailwindCSS
+- Project tracking and organization
 
-## Deploy your own
+## Tech Stack
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vunhutien/kanban-ui&project-name=kanban-app-ui&repository-name=kanban-ui)
+- Next.js
+- React
+- TailwindCSS
+- Heroicons
+- React Beautiful DnD
 
-## How to use
+## Getting Started
 
+1. Clone the repository:
 ```bash
-npm install 
-then
+git clone https://github.com/yourusername/nitrodynamics-kanban.git
+cd nitrodynamics-kanban
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the development server:
+```bash
 npm run dev
 ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+- `/components` - React components
+- `/pages` - Next.js pages
+- `/data` - JSON data files
+- `/public` - Static assets
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
