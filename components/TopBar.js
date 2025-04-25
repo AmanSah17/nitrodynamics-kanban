@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 function TopBar(props) {
     return (
-        <div className="h-16 pl-40 fixed bg-gradient-to-r from-purple-400
-        to-blue-500 w-full flex items-center justify-between pr-5">
+        <div className="h-16 pl-40 fixed bg-gradient-to-r from-[#0099FF] to-blue-600
+        w-full flex items-center justify-between pr-5">
             <div className="flex px-5 items-center">
                 <SearchIcon className="w-5 h-5 text-white"/>
                 <input type="text" placeholder="Search for tasks ..."
@@ -16,7 +16,7 @@ function TopBar(props) {
                 <AtSymbolIcon className="w-7 h-7 text-white"/>
                 <BellIcon className="w-7 h-7 text-white"/>
                 <div className="flex items-center text-white">
-                    <h3 className="font-bold mr-3">M. John Doe</h3>
+                    <h3 className="font-bold mr-3">NitroDynamics Team</h3>
                     <Image src="https://randomuser.me/api/portraits/men/75.jpg"
                         width="36" height="36" objectFit="cover"
                         className=" rounded-full "/>

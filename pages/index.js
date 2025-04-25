@@ -24,6 +24,10 @@ export default function Home() {
   const [boardData, setBoardData] = useState(BoardData);
   const [showForm, setShowForm] = useState(false);
   const [selectedBoard, setSelectedBoard] = useState(0);
+  const [newTask, setNewTask] = useState({
+    title: '',
+    priority: 0
+  });
 
   useEffect(() => {
     if (process.browser) {
@@ -60,8 +64,8 @@ export default function Home() {
         const item = {
           id: createGuidId(),
           title: val,
-          priority: 0,
-          chat:0,
+          priority: newTask.priority,
+          chat: 0,
           attachment: 0,
           assignees: []
         }
@@ -70,8 +74,13 @@ export default function Home() {
         setBoardData(newBoardData);
         setShowForm(false);
         e.target.value = '';
+        setNewTask({ title: '', priority: 0 });
       }
     }
+  }
+
+  const handlePriorityChange = (e) => {
+    setNewTask({ ...newTask, priority: parseInt(e.target.value) });
   }
 
   return (
@@ -174,10 +183,25 @@ export default function Home() {
                             {
                               showForm && selectedBoard === bIndex ? (
                                 <div className="p-3">
-                                  <textarea className="border-gray-300 rounded focus:ring-purple-400 w-full" 
-                                  rows={3} placeholder="Task info" 
-                                  data-id={bIndex}
-                                  onKeyDown={(e) => onTextAreaKeyPress(e)}/>
+                                  <div className="mb-3">
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">Priority</label>
+                                    <select 
+                                      className="border-gray-300 rounded focus:ring-purple-400 w-full"
+                                      value={newTask.priority}
+                                      onChange={handlePriorityChange}
+                                    >
+                                      <option value="0">Low Priority</option>
+                                      <option value="1">Medium Priority</option>
+                                      <option value="2">High Priority</option>
+                                    </select>
+                                  </div>
+                                  <textarea 
+                                    className="border-gray-300 rounded focus:ring-purple-400 w-full mb-3" 
+                                    rows={3} 
+                                    placeholder="Task info" 
+                                    data-id={bIndex}
+                                    onKeyDown={(e) => onTextAreaKeyPress(e)}
+                                  />
                                 </div>
                               ): (
                                 <button
@@ -203,3 +227,4 @@ export default function Home() {
     </Layout>
   );
 }
+
