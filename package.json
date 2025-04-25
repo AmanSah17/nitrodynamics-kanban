@@ -1,8 +1,11 @@
 {
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev",
-    "build": "next build",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && next build",
     "start": "next start"
   },
   "dependencies": {
