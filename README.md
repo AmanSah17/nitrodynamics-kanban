@@ -22,7 +22,7 @@ A modern Kanban board application built with Next.js and TailwindCSS, customized
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/nitrodynamics-kanban.git
+git clone https://github.com/AmanSah17/nitrodynamics-kanban.git
 cd nitrodynamics-kanban
 ```
 
